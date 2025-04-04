@@ -44,4 +44,8 @@ class BibleViewModel @Inject constructor(private val apiService: ApiService) : V
     }
 
 
+    fun deletePost(verse : Verse) {
+        verses = verses.filterNot { it.book_id == verse.book_id }
+    }
+
 }

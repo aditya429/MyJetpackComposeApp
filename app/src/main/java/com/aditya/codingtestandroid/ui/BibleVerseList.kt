@@ -34,7 +34,7 @@ fun BibleVerseList(viewModel: BibleViewModel = hiltViewModel()){
              LazyColumn {
 
                  items(verses){
-                         verses -> VerseItem(verses)
+                         verse -> VerseItem(verse, onDelete = { viewModel.deletePost(verse) })
                  }
 
              }
